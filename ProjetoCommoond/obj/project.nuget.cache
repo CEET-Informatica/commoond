@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "+npxoL7et3IYhcs/sc1JZX43MBlCmbAlEfV9m0CQaz1V9nqzyJYKjWJPUaFFp4zSLzn1vQvPpDsOoDRcQFaiAg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Aluno\\Source\\Repos\\ProjetoIntegrador\\ProjetoCommoond\\ProjetoCommoond.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Aluno\\.nuget\\packages\\fontawesome.sharp\\5.15.3\\fontawesome.sharp.5.15.3.nupkg.sha512",
+    "C:\\Users\\Aluno\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.18\\microsoft.netcore.app.host.win-x64.3.1.18.nupkg.sha512"
+  ],
+  "logs": []
+}
