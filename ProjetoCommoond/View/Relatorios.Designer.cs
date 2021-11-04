@@ -33,11 +33,10 @@ namespace ProjetoCommoond.View
             // 
             // Relatorios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(914, 600);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(164)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(960, 542);
             this.Name = "Relatorios";
             this.Text = "Relatorios";
             this.ResumeLayout(false);

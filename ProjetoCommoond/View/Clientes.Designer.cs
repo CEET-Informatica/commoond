@@ -344,6 +344,7 @@ namespace ProjetoCommoond.View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(164)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(960, 542);
             this.Controls.Add(this.groupInfoCliente);
             this.Controls.Add(this.btnClienteAdicionar);
