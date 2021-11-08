@@ -30,24 +30,24 @@ namespace ProjetoCommoond.View
         private void InitializeComponent()
         {
             this.btnProdutoExcluir = new FontAwesome.Sharp.IconButton();
-            this.lblObsProduto = new System.Windows.Forms.Label();
+            this.lblProdutoObs = new System.Windows.Forms.Label();
             this.txtProdutoObs = new System.Windows.Forms.RichTextBox();
-            this.lblNomeProduto = new System.Windows.Forms.Label();
+            this.lblProdutoNome = new System.Windows.Forms.Label();
             this.txtValorVarejo = new System.Windows.Forms.TextBox();
             this.txtValorAtacado = new System.Windows.Forms.TextBox();
-            this.txtNomeProduto = new System.Windows.Forms.TextBox();
+            this.txtProdutoNome = new System.Windows.Forms.TextBox();
             this.lblValorAtacado = new System.Windows.Forms.Label();
             this.lblValorVarejo = new System.Windows.Forms.Label();
-            this.txtPesoProduto = new System.Windows.Forms.TextBox();
-            this.lblPesoProduto = new System.Windows.Forms.Label();
+            this.txtProdutoPeso = new System.Windows.Forms.TextBox();
+            this.lblProdutoPeso = new System.Windows.Forms.Label();
             this.btnProdutoAdicionar = new FontAwesome.Sharp.IconButton();
             this.btnProdutoEditar = new FontAwesome.Sharp.IconButton();
             this.dataProduto = new System.Windows.Forms.DataGridView();
-            this.groupInfoProduto = new System.Windows.Forms.GroupBox();
+            this.groupProdutoInfo = new System.Windows.Forms.GroupBox();
             this.btnProdutoCancelar = new FontAwesome.Sharp.IconButton();
-            this.groupFornecedorProduto = new System.Windows.Forms.GroupBox();
+            this.groupProdutoFornecedor = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataProduto)).BeginInit();
-            this.groupInfoProduto.SuspendLayout();
+            this.groupProdutoInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnProdutoExcluir
@@ -67,16 +67,16 @@ namespace ProjetoCommoond.View
             this.btnProdutoExcluir.Text = "Excluir";
             this.btnProdutoExcluir.UseVisualStyleBackColor = false;
             // 
-            // lblObsProduto
+            // lblProdutoObs
             // 
-            this.lblObsProduto.AutoSize = true;
-            this.lblObsProduto.ForeColor = System.Drawing.Color.White;
-            this.lblObsProduto.Location = new System.Drawing.Point(20, 170);
-            this.lblObsProduto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblObsProduto.Name = "lblObsProduto";
-            this.lblObsProduto.Size = new System.Drawing.Size(127, 28);
-            this.lblObsProduto.TabIndex = 11;
-            this.lblObsProduto.Text = "Observações:";
+            this.lblProdutoObs.AutoSize = true;
+            this.lblProdutoObs.ForeColor = System.Drawing.Color.White;
+            this.lblProdutoObs.Location = new System.Drawing.Point(20, 170);
+            this.lblProdutoObs.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblProdutoObs.Name = "lblProdutoObs";
+            this.lblProdutoObs.Size = new System.Drawing.Size(127, 28);
+            this.lblProdutoObs.TabIndex = 11;
+            this.lblProdutoObs.Text = "Observações:";
             // 
             // txtProdutoObs
             // 
@@ -87,16 +87,16 @@ namespace ProjetoCommoond.View
             this.txtProdutoObs.TabIndex = 10;
             this.txtProdutoObs.Text = "";
             // 
-            // lblNomeProduto
+            // lblProdutoNome
             // 
-            this.lblNomeProduto.AutoSize = true;
-            this.lblNomeProduto.ForeColor = System.Drawing.Color.White;
-            this.lblNomeProduto.Location = new System.Drawing.Point(20, 44);
-            this.lblNomeProduto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNomeProduto.Name = "lblNomeProduto";
-            this.lblNomeProduto.Size = new System.Drawing.Size(66, 28);
-            this.lblNomeProduto.TabIndex = 0;
-            this.lblNomeProduto.Text = "Nome";
+            this.lblProdutoNome.AutoSize = true;
+            this.lblProdutoNome.ForeColor = System.Drawing.Color.White;
+            this.lblProdutoNome.Location = new System.Drawing.Point(20, 44);
+            this.lblProdutoNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblProdutoNome.Name = "lblProdutoNome";
+            this.lblProdutoNome.Size = new System.Drawing.Size(66, 28);
+            this.lblProdutoNome.TabIndex = 0;
+            this.lblProdutoNome.Text = "Nome";
             // 
             // txtValorVarejo
             // 
@@ -114,15 +114,15 @@ namespace ProjetoCommoond.View
             this.txtValorAtacado.Size = new System.Drawing.Size(340, 34);
             this.txtValorAtacado.TabIndex = 9;
             // 
-            // txtNomeProduto
+            // txtProdutoNome
             // 
-            this.txtNomeProduto.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtNomeProduto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNomeProduto.Location = new System.Drawing.Point(17, 73);
-            this.txtNomeProduto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtNomeProduto.Name = "txtNomeProduto";
-            this.txtNomeProduto.Size = new System.Drawing.Size(212, 34);
-            this.txtNomeProduto.TabIndex = 1;
+            this.txtProdutoNome.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtProdutoNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtProdutoNome.Location = new System.Drawing.Point(17, 73);
+            this.txtProdutoNome.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtProdutoNome.Name = "txtProdutoNome";
+            this.txtProdutoNome.Size = new System.Drawing.Size(212, 34);
+            this.txtProdutoNome.TabIndex = 1;
             // 
             // lblValorAtacado
             // 
@@ -146,24 +146,24 @@ namespace ProjetoCommoond.View
             this.lblValorVarejo.TabIndex = 2;
             this.lblValorVarejo.Text = "Valor no Varejo";
             // 
-            // txtPesoProduto
+            // txtProdutoPeso
             // 
-            this.txtPesoProduto.Location = new System.Drawing.Point(17, 135);
-            this.txtPesoProduto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtPesoProduto.Name = "txtPesoProduto";
-            this.txtPesoProduto.Size = new System.Drawing.Size(212, 34);
-            this.txtPesoProduto.TabIndex = 7;
+            this.txtProdutoPeso.Location = new System.Drawing.Point(17, 135);
+            this.txtProdutoPeso.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtProdutoPeso.Name = "txtProdutoPeso";
+            this.txtProdutoPeso.Size = new System.Drawing.Size(212, 34);
+            this.txtProdutoPeso.TabIndex = 7;
             // 
-            // lblPesoProduto
+            // lblProdutoPeso
             // 
-            this.lblPesoProduto.AutoSize = true;
-            this.lblPesoProduto.ForeColor = System.Drawing.Color.White;
-            this.lblPesoProduto.Location = new System.Drawing.Point(20, 106);
-            this.lblPesoProduto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPesoProduto.Name = "lblPesoProduto";
-            this.lblPesoProduto.Size = new System.Drawing.Size(52, 28);
-            this.lblPesoProduto.TabIndex = 6;
-            this.lblPesoProduto.Text = "Peso";
+            this.lblProdutoPeso.AutoSize = true;
+            this.lblProdutoPeso.ForeColor = System.Drawing.Color.White;
+            this.lblProdutoPeso.Location = new System.Drawing.Point(20, 106);
+            this.lblProdutoPeso.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblProdutoPeso.Name = "lblProdutoPeso";
+            this.lblProdutoPeso.Size = new System.Drawing.Size(52, 28);
+            this.lblProdutoPeso.TabIndex = 6;
+            this.lblProdutoPeso.Text = "Peso";
             // 
             // btnProdutoAdicionar
             // 
@@ -211,30 +211,30 @@ namespace ProjetoCommoond.View
             this.dataProduto.Size = new System.Drawing.Size(937, 184);
             this.dataProduto.TabIndex = 30;
             // 
-            // groupInfoProduto
+            // groupProdutoInfo
             // 
-            this.groupInfoProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
-            this.groupInfoProduto.Controls.Add(this.lblObsProduto);
-            this.groupInfoProduto.Controls.Add(this.txtProdutoObs);
-            this.groupInfoProduto.Controls.Add(this.lblNomeProduto);
-            this.groupInfoProduto.Controls.Add(this.txtValorVarejo);
-            this.groupInfoProduto.Controls.Add(this.txtValorAtacado);
-            this.groupInfoProduto.Controls.Add(this.txtNomeProduto);
-            this.groupInfoProduto.Controls.Add(this.lblValorAtacado);
-            this.groupInfoProduto.Controls.Add(this.lblValorVarejo);
-            this.groupInfoProduto.Controls.Add(this.txtPesoProduto);
-            this.groupInfoProduto.Controls.Add(this.lblPesoProduto);
-            this.groupInfoProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupInfoProduto.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupInfoProduto.ForeColor = System.Drawing.Color.White;
-            this.groupInfoProduto.Location = new System.Drawing.Point(11, 10);
-            this.groupInfoProduto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupInfoProduto.Name = "groupInfoProduto";
-            this.groupInfoProduto.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupInfoProduto.Size = new System.Drawing.Size(601, 332);
-            this.groupInfoProduto.TabIndex = 28;
-            this.groupInfoProduto.TabStop = false;
-            this.groupInfoProduto.Text = "Informações do Produto";
+            this.groupProdutoInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
+            this.groupProdutoInfo.Controls.Add(this.lblProdutoObs);
+            this.groupProdutoInfo.Controls.Add(this.txtProdutoObs);
+            this.groupProdutoInfo.Controls.Add(this.lblProdutoNome);
+            this.groupProdutoInfo.Controls.Add(this.txtValorVarejo);
+            this.groupProdutoInfo.Controls.Add(this.txtValorAtacado);
+            this.groupProdutoInfo.Controls.Add(this.txtProdutoNome);
+            this.groupProdutoInfo.Controls.Add(this.lblValorAtacado);
+            this.groupProdutoInfo.Controls.Add(this.lblValorVarejo);
+            this.groupProdutoInfo.Controls.Add(this.txtProdutoPeso);
+            this.groupProdutoInfo.Controls.Add(this.lblProdutoPeso);
+            this.groupProdutoInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupProdutoInfo.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupProdutoInfo.ForeColor = System.Drawing.Color.White;
+            this.groupProdutoInfo.Location = new System.Drawing.Point(11, 10);
+            this.groupProdutoInfo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupProdutoInfo.Name = "groupProdutoInfo";
+            this.groupProdutoInfo.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupProdutoInfo.Size = new System.Drawing.Size(601, 332);
+            this.groupProdutoInfo.TabIndex = 28;
+            this.groupProdutoInfo.TabStop = false;
+            this.groupProdutoInfo.Text = "Informações do Produto";
             // 
             // btnProdutoCancelar
             // 
@@ -253,20 +253,20 @@ namespace ProjetoCommoond.View
             this.btnProdutoCancelar.Text = "Cancelar";
             this.btnProdutoCancelar.UseVisualStyleBackColor = false;
             // 
-            // groupFornecedorProduto
+            // groupProdutoFornecedor
             // 
-            this.groupFornecedorProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
-            this.groupFornecedorProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupFornecedorProduto.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupFornecedorProduto.ForeColor = System.Drawing.Color.White;
-            this.groupFornecedorProduto.Location = new System.Drawing.Point(620, 10);
-            this.groupFornecedorProduto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupFornecedorProduto.Name = "groupFornecedorProduto";
-            this.groupFornecedorProduto.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupFornecedorProduto.Size = new System.Drawing.Size(329, 251);
-            this.groupFornecedorProduto.TabIndex = 29;
-            this.groupFornecedorProduto.TabStop = false;
-            this.groupFornecedorProduto.Text = "Possível Fornecedor";
+            this.groupProdutoFornecedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
+            this.groupProdutoFornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupProdutoFornecedor.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupProdutoFornecedor.ForeColor = System.Drawing.Color.White;
+            this.groupProdutoFornecedor.Location = new System.Drawing.Point(620, 10);
+            this.groupProdutoFornecedor.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupProdutoFornecedor.Name = "groupProdutoFornecedor";
+            this.groupProdutoFornecedor.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupProdutoFornecedor.Size = new System.Drawing.Size(329, 251);
+            this.groupProdutoFornecedor.TabIndex = 29;
+            this.groupProdutoFornecedor.TabStop = false;
+            this.groupProdutoFornecedor.Text = "Possível Fornecedor";
             // 
             // Produtos
             // 
@@ -278,14 +278,14 @@ namespace ProjetoCommoond.View
             this.Controls.Add(this.btnProdutoAdicionar);
             this.Controls.Add(this.btnProdutoEditar);
             this.Controls.Add(this.dataProduto);
-            this.Controls.Add(this.groupInfoProduto);
+            this.Controls.Add(this.groupProdutoInfo);
             this.Controls.Add(this.btnProdutoCancelar);
-            this.Controls.Add(this.groupFornecedorProduto);
+            this.Controls.Add(this.groupProdutoFornecedor);
             this.Name = "Produtos";
             this.Text = "Produtos";
             ((System.ComponentModel.ISupportInitialize)(this.dataProduto)).EndInit();
-            this.groupInfoProduto.ResumeLayout(false);
-            this.groupInfoProduto.PerformLayout();
+            this.groupProdutoInfo.ResumeLayout(false);
+            this.groupProdutoInfo.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -293,21 +293,21 @@ namespace ProjetoCommoond.View
         #endregion
 
         private FontAwesome.Sharp.IconButton btnProdutoExcluir;
-        private System.Windows.Forms.Label lblObsProduto;
+        private System.Windows.Forms.Label lblProdutoObs;
         private System.Windows.Forms.RichTextBox txtProdutoObs;
-        private System.Windows.Forms.Label lblNomeProduto;
+        private System.Windows.Forms.Label lblProdutoNome;
         private System.Windows.Forms.TextBox txtValorVarejo;
         private System.Windows.Forms.TextBox txtValorAtacado;
-        private System.Windows.Forms.TextBox txtNomeProduto;
+        private System.Windows.Forms.TextBox txtProdutoNome;
         private System.Windows.Forms.Label lblValorAtacado;
         private System.Windows.Forms.Label lblValorVarejo;
-        private System.Windows.Forms.TextBox txtPesoProduto;
-        private System.Windows.Forms.Label lblPesoProduto;
+        private System.Windows.Forms.TextBox txtProdutoPeso;
+        private System.Windows.Forms.Label lblProdutoPeso;
         private FontAwesome.Sharp.IconButton btnProdutoAdicionar;
         private FontAwesome.Sharp.IconButton btnProdutoEditar;
         private System.Windows.Forms.DataGridView dataProduto;
-        private System.Windows.Forms.GroupBox groupInfoProduto;
+        private System.Windows.Forms.GroupBox groupProdutoInfo;
         private FontAwesome.Sharp.IconButton btnProdutoCancelar;
-        private System.Windows.Forms.GroupBox groupFornecedorProduto;
+        private System.Windows.Forms.GroupBox groupProdutoFornecedor;
     }
 }

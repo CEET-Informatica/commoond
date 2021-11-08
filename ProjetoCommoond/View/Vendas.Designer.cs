@@ -29,65 +29,127 @@ namespace ProjetoCommoond.View
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupInfoVenda = new System.Windows.Forms.GroupBox();
-            this.lblClienteVenda = new System.Windows.Forms.Label();
+            this.groupVendaInfo = new System.Windows.Forms.GroupBox();
+            this.cbFormaPagamento = new System.Windows.Forms.ComboBox();
+            this.dateVenda = new System.Windows.Forms.DateTimePicker();
+            this.lblVendaData = new System.Windows.Forms.Label();
+            this.lblVendaQuantidade = new System.Windows.Forms.Label();
+            this.txtVendaQuantidade = new System.Windows.Forms.TextBox();
+            this.cbVendaProduto = new System.Windows.Forms.ComboBox();
+            this.cbVendaCliente = new System.Windows.Forms.ComboBox();
+            this.lblVendaCliente = new System.Windows.Forms.Label();
             this.txtValorTotal = new System.Windows.Forms.TextBox();
             this.lblValorTotal = new System.Windows.Forms.Label();
-            this.lblProdutoVenda = new System.Windows.Forms.Label();
+            this.lblVendaProduto = new System.Windows.Forms.Label();
             this.lblFormaPagamento = new System.Windows.Forms.Label();
             this.btnVendaAdicionar = new FontAwesome.Sharp.IconButton();
             this.btnVendaEditar = new FontAwesome.Sharp.IconButton();
             this.dataVenda = new System.Windows.Forms.DataGridView();
             this.btnVendaCancelar = new FontAwesome.Sharp.IconButton();
             this.btnVendaExcluir = new FontAwesome.Sharp.IconButton();
-            this.cbClienteVenda = new System.Windows.Forms.ComboBox();
-            this.cbProdutoVenda = new System.Windows.Forms.ComboBox();
-            this.txtQuantidadeVenda = new System.Windows.Forms.TextBox();
-            this.lblQuantidadeVenda = new System.Windows.Forms.Label();
-            this.lblData = new System.Windows.Forms.Label();
-            this.dateTimePickerVenda = new System.Windows.Forms.DateTimePicker();
-            this.cbFormaPagamento = new System.Windows.Forms.ComboBox();
-            this.groupInfoVenda.SuspendLayout();
+            this.groupVendaInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataVenda)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupInfoVenda
+            // groupVendaInfo
             // 
-            this.groupInfoVenda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
-            this.groupInfoVenda.Controls.Add(this.cbFormaPagamento);
-            this.groupInfoVenda.Controls.Add(this.dateTimePickerVenda);
-            this.groupInfoVenda.Controls.Add(this.lblData);
-            this.groupInfoVenda.Controls.Add(this.lblQuantidadeVenda);
-            this.groupInfoVenda.Controls.Add(this.txtQuantidadeVenda);
-            this.groupInfoVenda.Controls.Add(this.cbProdutoVenda);
-            this.groupInfoVenda.Controls.Add(this.cbClienteVenda);
-            this.groupInfoVenda.Controls.Add(this.lblClienteVenda);
-            this.groupInfoVenda.Controls.Add(this.txtValorTotal);
-            this.groupInfoVenda.Controls.Add(this.lblValorTotal);
-            this.groupInfoVenda.Controls.Add(this.lblProdutoVenda);
-            this.groupInfoVenda.Controls.Add(this.lblFormaPagamento);
-            this.groupInfoVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupInfoVenda.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupInfoVenda.ForeColor = System.Drawing.Color.White;
-            this.groupInfoVenda.Location = new System.Drawing.Point(11, 10);
-            this.groupInfoVenda.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupInfoVenda.Name = "groupInfoVenda";
-            this.groupInfoVenda.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupInfoVenda.Size = new System.Drawing.Size(601, 332);
-            this.groupInfoVenda.TabIndex = 28;
-            this.groupInfoVenda.TabStop = false;
-            this.groupInfoVenda.Text = "Venda do Produto";
+            this.groupVendaInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
+            this.groupVendaInfo.Controls.Add(this.cbFormaPagamento);
+            this.groupVendaInfo.Controls.Add(this.dateVenda);
+            this.groupVendaInfo.Controls.Add(this.lblVendaData);
+            this.groupVendaInfo.Controls.Add(this.lblVendaQuantidade);
+            this.groupVendaInfo.Controls.Add(this.txtVendaQuantidade);
+            this.groupVendaInfo.Controls.Add(this.cbVendaProduto);
+            this.groupVendaInfo.Controls.Add(this.cbVendaCliente);
+            this.groupVendaInfo.Controls.Add(this.lblVendaCliente);
+            this.groupVendaInfo.Controls.Add(this.txtValorTotal);
+            this.groupVendaInfo.Controls.Add(this.lblValorTotal);
+            this.groupVendaInfo.Controls.Add(this.lblVendaProduto);
+            this.groupVendaInfo.Controls.Add(this.lblFormaPagamento);
+            this.groupVendaInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupVendaInfo.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupVendaInfo.ForeColor = System.Drawing.Color.White;
+            this.groupVendaInfo.Location = new System.Drawing.Point(11, 10);
+            this.groupVendaInfo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupVendaInfo.Name = "groupVendaInfo";
+            this.groupVendaInfo.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupVendaInfo.Size = new System.Drawing.Size(601, 332);
+            this.groupVendaInfo.TabIndex = 28;
+            this.groupVendaInfo.TabStop = false;
+            this.groupVendaInfo.Text = "Venda do Produto";
             // 
-            // lblClienteVenda
+            // cbFormaPagamento
             // 
-            this.lblClienteVenda.AutoSize = true;
-            this.lblClienteVenda.ForeColor = System.Drawing.Color.White;
-            this.lblClienteVenda.Location = new System.Drawing.Point(20, 44);
-            this.lblClienteVenda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblClienteVenda.Name = "lblClienteVenda";
-            this.lblClienteVenda.Size = new System.Drawing.Size(72, 28);
-            this.lblClienteVenda.TabIndex = 0;
-            this.lblClienteVenda.Text = "Cliente";
+            this.cbFormaPagamento.FormattingEnabled = true;
+            this.cbFormaPagamento.Location = new System.Drawing.Point(20, 235);
+            this.cbFormaPagamento.Name = "cbFormaPagamento";
+            this.cbFormaPagamento.Size = new System.Drawing.Size(199, 36);
+            this.cbFormaPagamento.TabIndex = 18;
+            // 
+            // dateVenda
+            // 
+            this.dateVenda.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateVenda.Location = new System.Drawing.Point(435, 68);
+            this.dateVenda.Name = "dateVenda";
+            this.dateVenda.Size = new System.Drawing.Size(120, 34);
+            this.dateVenda.TabIndex = 17;
+            // 
+            // lblVendaData
+            // 
+            this.lblVendaData.AutoSize = true;
+            this.lblVendaData.ForeColor = System.Drawing.Color.White;
+            this.lblVendaData.Location = new System.Drawing.Point(466, 44);
+            this.lblVendaData.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblVendaData.Name = "lblVendaData";
+            this.lblVendaData.Size = new System.Drawing.Size(53, 28);
+            this.lblVendaData.TabIndex = 16;
+            this.lblVendaData.Text = "Data";
+            // 
+            // lblVendaQuantidade
+            // 
+            this.lblVendaQuantidade.AutoSize = true;
+            this.lblVendaQuantidade.ForeColor = System.Drawing.Color.White;
+            this.lblVendaQuantidade.Location = new System.Drawing.Point(435, 109);
+            this.lblVendaQuantidade.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblVendaQuantidade.Name = "lblVendaQuantidade";
+            this.lblVendaQuantidade.Size = new System.Drawing.Size(115, 28);
+            this.lblVendaQuantidade.TabIndex = 15;
+            this.lblVendaQuantidade.Text = "Quantidade";
+            // 
+            // txtVendaQuantidade
+            // 
+            this.txtVendaQuantidade.Location = new System.Drawing.Point(435, 139);
+            this.txtVendaQuantidade.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtVendaQuantidade.Name = "txtVendaQuantidade";
+            this.txtVendaQuantidade.Size = new System.Drawing.Size(120, 34);
+            this.txtVendaQuantidade.TabIndex = 14;
+            // 
+            // cbVendaProduto
+            // 
+            this.cbVendaProduto.FormattingEnabled = true;
+            this.cbVendaProduto.Location = new System.Drawing.Point(17, 137);
+            this.cbVendaProduto.Name = "cbVendaProduto";
+            this.cbVendaProduto.Size = new System.Drawing.Size(366, 36);
+            this.cbVendaProduto.TabIndex = 13;
+            // 
+            // cbVendaCliente
+            // 
+            this.cbVendaCliente.FormattingEnabled = true;
+            this.cbVendaCliente.Location = new System.Drawing.Point(17, 70);
+            this.cbVendaCliente.Name = "cbVendaCliente";
+            this.cbVendaCliente.Size = new System.Drawing.Size(366, 36);
+            this.cbVendaCliente.TabIndex = 12;
+            // 
+            // lblVendaCliente
+            // 
+            this.lblVendaCliente.AutoSize = true;
+            this.lblVendaCliente.ForeColor = System.Drawing.Color.White;
+            this.lblVendaCliente.Location = new System.Drawing.Point(20, 44);
+            this.lblVendaCliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblVendaCliente.Name = "lblVendaCliente";
+            this.lblVendaCliente.Size = new System.Drawing.Size(72, 28);
+            this.lblVendaCliente.TabIndex = 0;
+            this.lblVendaCliente.Text = "Cliente";
             // 
             // txtValorTotal
             // 
@@ -108,16 +170,16 @@ namespace ProjetoCommoond.View
             this.lblValorTotal.TabIndex = 8;
             this.lblValorTotal.Text = "Valor Total";
             // 
-            // lblProdutoVenda
+            // lblVendaProduto
             // 
-            this.lblProdutoVenda.AutoSize = true;
-            this.lblProdutoVenda.ForeColor = System.Drawing.Color.White;
-            this.lblProdutoVenda.Location = new System.Drawing.Point(20, 109);
-            this.lblProdutoVenda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblProdutoVenda.Name = "lblProdutoVenda";
-            this.lblProdutoVenda.Size = new System.Drawing.Size(84, 28);
-            this.lblProdutoVenda.TabIndex = 2;
-            this.lblProdutoVenda.Text = "Produto";
+            this.lblVendaProduto.AutoSize = true;
+            this.lblVendaProduto.ForeColor = System.Drawing.Color.White;
+            this.lblVendaProduto.Location = new System.Drawing.Point(20, 109);
+            this.lblVendaProduto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblVendaProduto.Name = "lblVendaProduto";
+            this.lblVendaProduto.Size = new System.Drawing.Size(84, 28);
+            this.lblVendaProduto.TabIndex = 2;
+            this.lblVendaProduto.Text = "Produto";
             // 
             // lblFormaPagamento
             // 
@@ -210,75 +272,13 @@ namespace ProjetoCommoond.View
             this.btnVendaExcluir.Text = "Excluir";
             this.btnVendaExcluir.UseVisualStyleBackColor = false;
             // 
-            // cbClienteVenda
-            // 
-            this.cbClienteVenda.FormattingEnabled = true;
-            this.cbClienteVenda.Location = new System.Drawing.Point(17, 70);
-            this.cbClienteVenda.Name = "cbClienteVenda";
-            this.cbClienteVenda.Size = new System.Drawing.Size(366, 36);
-            this.cbClienteVenda.TabIndex = 12;
-            // 
-            // cbProdutoVenda
-            // 
-            this.cbProdutoVenda.FormattingEnabled = true;
-            this.cbProdutoVenda.Location = new System.Drawing.Point(17, 137);
-            this.cbProdutoVenda.Name = "cbProdutoVenda";
-            this.cbProdutoVenda.Size = new System.Drawing.Size(366, 36);
-            this.cbProdutoVenda.TabIndex = 13;
-            // 
-            // txtQuantidadeVenda
-            // 
-            this.txtQuantidadeVenda.Location = new System.Drawing.Point(435, 139);
-            this.txtQuantidadeVenda.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtQuantidadeVenda.Name = "txtQuantidadeVenda";
-            this.txtQuantidadeVenda.Size = new System.Drawing.Size(120, 34);
-            this.txtQuantidadeVenda.TabIndex = 14;
-            // 
-            // lblQuantidadeVenda
-            // 
-            this.lblQuantidadeVenda.AutoSize = true;
-            this.lblQuantidadeVenda.ForeColor = System.Drawing.Color.White;
-            this.lblQuantidadeVenda.Location = new System.Drawing.Point(435, 109);
-            this.lblQuantidadeVenda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblQuantidadeVenda.Name = "lblQuantidadeVenda";
-            this.lblQuantidadeVenda.Size = new System.Drawing.Size(115, 28);
-            this.lblQuantidadeVenda.TabIndex = 15;
-            this.lblQuantidadeVenda.Text = "Quantidade";
-            // 
-            // lblData
-            // 
-            this.lblData.AutoSize = true;
-            this.lblData.ForeColor = System.Drawing.Color.White;
-            this.lblData.Location = new System.Drawing.Point(466, 44);
-            this.lblData.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblData.Name = "lblData";
-            this.lblData.Size = new System.Drawing.Size(53, 28);
-            this.lblData.TabIndex = 16;
-            this.lblData.Text = "Data";
-            // 
-            // dateTimePickerVenda
-            // 
-            this.dateTimePickerVenda.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerVenda.Location = new System.Drawing.Point(435, 68);
-            this.dateTimePickerVenda.Name = "dateTimePickerVenda";
-            this.dateTimePickerVenda.Size = new System.Drawing.Size(120, 34);
-            this.dateTimePickerVenda.TabIndex = 17;
-            // 
-            // cbFormaPagamento
-            // 
-            this.cbFormaPagamento.FormattingEnabled = true;
-            this.cbFormaPagamento.Location = new System.Drawing.Point(20, 235);
-            this.cbFormaPagamento.Name = "cbFormaPagamento";
-            this.cbFormaPagamento.Size = new System.Drawing.Size(199, 36);
-            this.cbFormaPagamento.TabIndex = 18;
-            // 
             // Vendas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(164)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(960, 542);
-            this.Controls.Add(this.groupInfoVenda);
+            this.Controls.Add(this.groupVendaInfo);
             this.Controls.Add(this.btnVendaAdicionar);
             this.Controls.Add(this.btnVendaEditar);
             this.Controls.Add(this.dataVenda);
@@ -286,8 +286,8 @@ namespace ProjetoCommoond.View
             this.Controls.Add(this.btnVendaExcluir);
             this.Name = "Vendas";
             this.Text = "Vendas";
-            this.groupInfoVenda.ResumeLayout(false);
-            this.groupInfoVenda.PerformLayout();
+            this.groupVendaInfo.ResumeLayout(false);
+            this.groupVendaInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataVenda)).EndInit();
             this.ResumeLayout(false);
 
@@ -295,23 +295,23 @@ namespace ProjetoCommoond.View
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupInfoVenda;
-        private System.Windows.Forms.Label lblClienteVenda;
+        private System.Windows.Forms.GroupBox groupVendaInfo;
+        private System.Windows.Forms.Label lblVendaCliente;
         private System.Windows.Forms.TextBox txtValorTotal;
         private System.Windows.Forms.Label lblValorTotal;
-        private System.Windows.Forms.Label lblProdutoVenda;
+        private System.Windows.Forms.Label lblVendaProduto;
         private System.Windows.Forms.Label lblFormaPagamento;
         private FontAwesome.Sharp.IconButton btnVendaAdicionar;
         private FontAwesome.Sharp.IconButton btnVendaEditar;
         private System.Windows.Forms.DataGridView dataVenda;
         private FontAwesome.Sharp.IconButton btnVendaCancelar;
         private FontAwesome.Sharp.IconButton btnVendaExcluir;
-        private System.Windows.Forms.ComboBox cbClienteVenda;
-        private System.Windows.Forms.ComboBox cbProdutoVenda;
+        private System.Windows.Forms.ComboBox cbVendaCliente;
+        private System.Windows.Forms.ComboBox cbVendaProduto;
         private System.Windows.Forms.ComboBox cbFormaPagamento;
-        private System.Windows.Forms.DateTimePicker dateTimePickerVenda;
-        private System.Windows.Forms.Label lblData;
-        private System.Windows.Forms.Label lblQuantidadeVenda;
-        private System.Windows.Forms.TextBox txtQuantidadeVenda;
+        private System.Windows.Forms.DateTimePicker dateVenda;
+        private System.Windows.Forms.Label lblVendaData;
+        private System.Windows.Forms.Label lblVendaQuantidade;
+        private System.Windows.Forms.TextBox txtVendaQuantidade;
     }
 }
