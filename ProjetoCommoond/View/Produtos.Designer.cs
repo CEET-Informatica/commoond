@@ -30,7 +30,6 @@ namespace ProjetoCommoond.View
         private void InitializeComponent()
         {
             this.btnProdutoExcluir = new FontAwesome.Sharp.IconButton();
-            this.lblRazaoSocialFornecedor = new System.Windows.Forms.Label();
             this.lblObsProduto = new System.Windows.Forms.Label();
             this.txtProdutoObs = new System.Windows.Forms.RichTextBox();
             this.lblNomeProduto = new System.Windows.Forms.Label();
@@ -40,21 +39,15 @@ namespace ProjetoCommoond.View
             this.lblValorAtacado = new System.Windows.Forms.Label();
             this.lblValorVarejo = new System.Windows.Forms.Label();
             this.txtPesoProduto = new System.Windows.Forms.TextBox();
-            this.lblFornecedorTelefone = new System.Windows.Forms.Label();
-            this.txtClienteContatoTelefone = new System.Windows.Forms.TextBox();
-            this.lblFornecedorEmail = new System.Windows.Forms.Label();
-            this.txtClienteContatoEmail = new System.Windows.Forms.TextBox();
             this.lblPesoProduto = new System.Windows.Forms.Label();
             this.btnProdutoAdicionar = new FontAwesome.Sharp.IconButton();
             this.btnProdutoEditar = new FontAwesome.Sharp.IconButton();
             this.dataProduto = new System.Windows.Forms.DataGridView();
-            this.txtClienteContatoNome = new System.Windows.Forms.TextBox();
             this.groupInfoProduto = new System.Windows.Forms.GroupBox();
             this.btnProdutoCancelar = new FontAwesome.Sharp.IconButton();
             this.groupFornecedorProduto = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataProduto)).BeginInit();
             this.groupInfoProduto.SuspendLayout();
-            this.groupFornecedorProduto.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnProdutoExcluir
@@ -73,17 +66,6 @@ namespace ProjetoCommoond.View
             this.btnProdutoExcluir.TabIndex = 34;
             this.btnProdutoExcluir.Text = "Excluir";
             this.btnProdutoExcluir.UseVisualStyleBackColor = false;
-            // 
-            // lblRazaoSocialFornecedor
-            // 
-            this.lblRazaoSocialFornecedor.AutoSize = true;
-            this.lblRazaoSocialFornecedor.ForeColor = System.Drawing.Color.White;
-            this.lblRazaoSocialFornecedor.Location = new System.Drawing.Point(18, 44);
-            this.lblRazaoSocialFornecedor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblRazaoSocialFornecedor.Name = "lblRazaoSocialFornecedor";
-            this.lblRazaoSocialFornecedor.Size = new System.Drawing.Size(122, 28);
-            this.lblRazaoSocialFornecedor.TabIndex = 12;
-            this.lblRazaoSocialFornecedor.Text = "Razão Social";
             // 
             // lblObsProduto
             // 
@@ -172,44 +154,6 @@ namespace ProjetoCommoond.View
             this.txtPesoProduto.Size = new System.Drawing.Size(212, 34);
             this.txtPesoProduto.TabIndex = 7;
             // 
-            // lblFornecedorTelefone
-            // 
-            this.lblFornecedorTelefone.AutoSize = true;
-            this.lblFornecedorTelefone.ForeColor = System.Drawing.Color.White;
-            this.lblFornecedorTelefone.Location = new System.Drawing.Point(18, 170);
-            this.lblFornecedorTelefone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblFornecedorTelefone.Name = "lblFornecedorTelefone";
-            this.lblFornecedorTelefone.Size = new System.Drawing.Size(164, 28);
-            this.lblFornecedorTelefone.TabIndex = 16;
-            this.lblFornecedorTelefone.Text = "Telefone Principal";
-            // 
-            // txtClienteContatoTelefone
-            // 
-            this.txtClienteContatoTelefone.Location = new System.Drawing.Point(15, 198);
-            this.txtClienteContatoTelefone.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtClienteContatoTelefone.Name = "txtClienteContatoTelefone";
-            this.txtClienteContatoTelefone.Size = new System.Drawing.Size(296, 34);
-            this.txtClienteContatoTelefone.TabIndex = 17;
-            // 
-            // lblFornecedorEmail
-            // 
-            this.lblFornecedorEmail.AutoSize = true;
-            this.lblFornecedorEmail.ForeColor = System.Drawing.Color.White;
-            this.lblFornecedorEmail.Location = new System.Drawing.Point(18, 106);
-            this.lblFornecedorEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblFornecedorEmail.Name = "lblFornecedorEmail";
-            this.lblFornecedorEmail.Size = new System.Drawing.Size(67, 28);
-            this.lblFornecedorEmail.TabIndex = 14;
-            this.lblFornecedorEmail.Text = "E-mail";
-            // 
-            // txtClienteContatoEmail
-            // 
-            this.txtClienteContatoEmail.Location = new System.Drawing.Point(15, 135);
-            this.txtClienteContatoEmail.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtClienteContatoEmail.Name = "txtClienteContatoEmail";
-            this.txtClienteContatoEmail.Size = new System.Drawing.Size(296, 34);
-            this.txtClienteContatoEmail.TabIndex = 15;
-            // 
             // lblPesoProduto
             // 
             this.lblPesoProduto.AutoSize = true;
@@ -267,14 +211,6 @@ namespace ProjetoCommoond.View
             this.dataProduto.Size = new System.Drawing.Size(937, 184);
             this.dataProduto.TabIndex = 30;
             // 
-            // txtClienteContatoNome
-            // 
-            this.txtClienteContatoNome.Location = new System.Drawing.Point(15, 72);
-            this.txtClienteContatoNome.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtClienteContatoNome.Name = "txtClienteContatoNome";
-            this.txtClienteContatoNome.Size = new System.Drawing.Size(296, 34);
-            this.txtClienteContatoNome.TabIndex = 13;
-            // 
             // groupInfoProduto
             // 
             this.groupInfoProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
@@ -320,12 +256,6 @@ namespace ProjetoCommoond.View
             // groupFornecedorProduto
             // 
             this.groupFornecedorProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
-            this.groupFornecedorProduto.Controls.Add(this.lblFornecedorTelefone);
-            this.groupFornecedorProduto.Controls.Add(this.txtClienteContatoTelefone);
-            this.groupFornecedorProduto.Controls.Add(this.lblFornecedorEmail);
-            this.groupFornecedorProduto.Controls.Add(this.txtClienteContatoEmail);
-            this.groupFornecedorProduto.Controls.Add(this.lblRazaoSocialFornecedor);
-            this.groupFornecedorProduto.Controls.Add(this.txtClienteContatoNome);
             this.groupFornecedorProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupFornecedorProduto.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupFornecedorProduto.ForeColor = System.Drawing.Color.White;
@@ -356,8 +286,6 @@ namespace ProjetoCommoond.View
             ((System.ComponentModel.ISupportInitialize)(this.dataProduto)).EndInit();
             this.groupInfoProduto.ResumeLayout(false);
             this.groupInfoProduto.PerformLayout();
-            this.groupFornecedorProduto.ResumeLayout(false);
-            this.groupFornecedorProduto.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -365,7 +293,6 @@ namespace ProjetoCommoond.View
         #endregion
 
         private FontAwesome.Sharp.IconButton btnProdutoExcluir;
-        private System.Windows.Forms.Label lblRazaoSocialFornecedor;
         private System.Windows.Forms.Label lblObsProduto;
         private System.Windows.Forms.RichTextBox txtProdutoObs;
         private System.Windows.Forms.Label lblNomeProduto;
@@ -375,15 +302,10 @@ namespace ProjetoCommoond.View
         private System.Windows.Forms.Label lblValorAtacado;
         private System.Windows.Forms.Label lblValorVarejo;
         private System.Windows.Forms.TextBox txtPesoProduto;
-        private System.Windows.Forms.Label lblFornecedorTelefone;
-        private System.Windows.Forms.TextBox txtClienteContatoTelefone;
-        private System.Windows.Forms.Label lblFornecedorEmail;
-        private System.Windows.Forms.TextBox txtClienteContatoEmail;
         private System.Windows.Forms.Label lblPesoProduto;
         private FontAwesome.Sharp.IconButton btnProdutoAdicionar;
         private FontAwesome.Sharp.IconButton btnProdutoEditar;
         private System.Windows.Forms.DataGridView dataProduto;
-        private System.Windows.Forms.TextBox txtClienteContatoNome;
         private System.Windows.Forms.GroupBox groupInfoProduto;
         private FontAwesome.Sharp.IconButton btnProdutoCancelar;
         private System.Windows.Forms.GroupBox groupFornecedorProduto;
