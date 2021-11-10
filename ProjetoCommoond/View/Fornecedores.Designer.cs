@@ -30,6 +30,10 @@ namespace ProjetoCommoond.View
         private void InitializeComponent()
         {
             this.groupInfoFornec = new System.Windows.Forms.GroupBox();
+            this.txtFornecProd = new System.Windows.Forms.TextBox();
+            this.txtFornecEndereco = new System.Windows.Forms.TextBox();
+            this.lblFornecEndereco = new System.Windows.Forms.Label();
+            this.lblFornecProd = new System.Windows.Forms.Label();
             this.lblFornecObs = new System.Windows.Forms.Label();
             this.txtFornecObs = new System.Windows.Forms.RichTextBox();
             this.lblFornecCnpj = new System.Windows.Forms.Label();
@@ -60,6 +64,10 @@ namespace ProjetoCommoond.View
             // groupInfoFornec
             // 
             this.groupInfoFornec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
+            this.groupInfoFornec.Controls.Add(this.txtFornecProd);
+            this.groupInfoFornec.Controls.Add(this.txtFornecEndereco);
+            this.groupInfoFornec.Controls.Add(this.lblFornecEndereco);
+            this.groupInfoFornec.Controls.Add(this.lblFornecProd);
             this.groupInfoFornec.Controls.Add(this.lblFornecObs);
             this.groupInfoFornec.Controls.Add(this.txtFornecObs);
             this.groupInfoFornec.Controls.Add(this.lblFornecCnpj);
@@ -82,23 +90,61 @@ namespace ProjetoCommoond.View
             this.groupInfoFornec.TabStop = false;
             this.groupInfoFornec.Text = "Informações empresariais";
             // 
+            // txtFornecProd
+            // 
+            this.txtFornecProd.Location = new System.Drawing.Point(17, 202);
+            this.txtFornecProd.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtFornecProd.Name = "txtFornecProd";
+            this.txtFornecProd.Size = new System.Drawing.Size(212, 34);
+            this.txtFornecProd.TabIndex = 16;
+            // 
+            // txtFornecEndereco
+            // 
+            this.txtFornecEndereco.Location = new System.Drawing.Point(18, 270);
+            this.txtFornecEndereco.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtFornecEndereco.Name = "txtFornecEndereco";
+            this.txtFornecEndereco.Size = new System.Drawing.Size(211, 34);
+            this.txtFornecEndereco.TabIndex = 15;
+            // 
+            // lblFornecEndereco
+            // 
+            this.lblFornecEndereco.AutoSize = true;
+            this.lblFornecEndereco.ForeColor = System.Drawing.Color.White;
+            this.lblFornecEndereco.Location = new System.Drawing.Point(18, 239);
+            this.lblFornecEndereco.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFornecEndereco.Name = "lblFornecEndereco";
+            this.lblFornecEndereco.Size = new System.Drawing.Size(93, 28);
+            this.lblFornecEndereco.TabIndex = 14;
+            this.lblFornecEndereco.Text = "Endereço";
+            // 
+            // lblFornecProd
+            // 
+            this.lblFornecProd.AutoSize = true;
+            this.lblFornecProd.ForeColor = System.Drawing.Color.White;
+            this.lblFornecProd.Location = new System.Drawing.Point(17, 173);
+            this.lblFornecProd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFornecProd.Name = "lblFornecProd";
+            this.lblFornecProd.Size = new System.Drawing.Size(173, 28);
+            this.lblFornecProd.TabIndex = 13;
+            this.lblFornecProd.Text = "Produto fornecido";
+            // 
             // lblFornecObs
             // 
             this.lblFornecObs.AutoSize = true;
             this.lblFornecObs.ForeColor = System.Drawing.Color.White;
-            this.lblFornecObs.Location = new System.Drawing.Point(18, 170);
+            this.lblFornecObs.Location = new System.Drawing.Point(248, 173);
             this.lblFornecObs.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFornecObs.Name = "lblFornecObs";
-            this.lblFornecObs.Size = new System.Drawing.Size(228, 28);
+            this.lblFornecObs.Size = new System.Drawing.Size(127, 28);
             this.lblFornecObs.TabIndex = 11;
-            this.lblFornecObs.Text = "Observações e endereço:";
+            this.lblFornecObs.Text = "Observações:";
             // 
             // txtFornecObs
             // 
-            this.txtFornecObs.Location = new System.Drawing.Point(17, 198);
+            this.txtFornecObs.Location = new System.Drawing.Point(248, 204);
             this.txtFornecObs.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtFornecObs.Name = "txtFornecObs";
-            this.txtFornecObs.Size = new System.Drawing.Size(570, 116);
+            this.txtFornecObs.Size = new System.Drawing.Size(339, 109);
             this.txtFornecObs.TabIndex = 10;
             this.txtFornecObs.Text = "";
             // 
@@ -387,5 +433,9 @@ namespace ProjetoCommoond.View
         private System.Windows.Forms.Label lblFornecContatoNome;
         private System.Windows.Forms.TextBox txtFornecContatoNome;
         private FontAwesome.Sharp.IconButton btnFornecExcluir;
+        private System.Windows.Forms.TextBox txtFornecEndereco;
+        private System.Windows.Forms.Label lblFornecEndereco;
+        private System.Windows.Forms.Label lblFornecProd;
+        private System.Windows.Forms.TextBox txtFornecProd;
     }
 }
