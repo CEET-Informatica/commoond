@@ -29,8 +29,11 @@ namespace ProjetoCommoond
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainMenu));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnMaterial = new FontAwesome.Sharp.IconButton();
+            this.btnCompras = new FontAwesome.Sharp.IconButton();
             this.btnConfiguracoes = new FontAwesome.Sharp.IconButton();
             this.btnRelatorios = new FontAwesome.Sharp.IconButton();
             this.btnFornecedores = new FontAwesome.Sharp.IconButton();
@@ -47,7 +50,10 @@ namespace ProjetoCommoond
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.txtMenuRelogio = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timerRelogio = new System.Windows.Forms.Timer(this.components);
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnHome)).BeginInit();
@@ -55,11 +61,14 @@ namespace ProjetoCommoond
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
             this.panelDesktop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
+            this.panelMenu.Controls.Add(this.btnMaterial);
+            this.panelMenu.Controls.Add(this.btnCompras);
             this.panelMenu.Controls.Add(this.btnConfiguracoes);
             this.panelMenu.Controls.Add(this.btnRelatorios);
             this.panelMenu.Controls.Add(this.btnFornecedores);
@@ -69,10 +78,53 @@ namespace ProjetoCommoond
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(251, 841);
+            this.panelMenu.Size = new System.Drawing.Size(220, 631);
             this.panelMenu.TabIndex = 0;
+            // 
+            // btnMaterial
+            // 
+            this.btnMaterial.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMaterial.FlatAppearance.BorderSize = 0;
+            this.btnMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaterial.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnMaterial.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnMaterial.IconChar = FontAwesome.Sharp.IconChar.Toolbox;
+            this.btnMaterial.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnMaterial.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMaterial.IconSize = 32;
+            this.btnMaterial.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMaterial.Location = new System.Drawing.Point(0, 500);
+            this.btnMaterial.Name = "btnMaterial";
+            this.btnMaterial.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnMaterial.Size = new System.Drawing.Size(220, 60);
+            this.btnMaterial.TabIndex = 8;
+            this.btnMaterial.Text = "Material";
+            this.btnMaterial.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMaterial.UseVisualStyleBackColor = true;
+            this.btnMaterial.Click += new System.EventHandler(this.btnMaterial_Click);
+            // 
+            // btnCompras
+            // 
+            this.btnCompras.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCompras.FlatAppearance.BorderSize = 0;
+            this.btnCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCompras.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCompras.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnCompras.IconChar = FontAwesome.Sharp.IconChar.ShoppingCart;
+            this.btnCompras.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnCompras.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCompras.IconSize = 32;
+            this.btnCompras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCompras.Location = new System.Drawing.Point(0, 440);
+            this.btnCompras.Name = "btnCompras";
+            this.btnCompras.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnCompras.Size = new System.Drawing.Size(220, 60);
+            this.btnCompras.TabIndex = 7;
+            this.btnCompras.Text = "Compras";
+            this.btnCompras.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCompras.UseVisualStyleBackColor = true;
+            this.btnCompras.Click += new System.EventHandler(this.btnCompras_Click);
             // 
             // btnConfiguracoes
             // 
@@ -86,11 +138,10 @@ namespace ProjetoCommoond
             this.btnConfiguracoes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnConfiguracoes.IconSize = 32;
             this.btnConfiguracoes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConfiguracoes.Location = new System.Drawing.Point(0, 761);
-            this.btnConfiguracoes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnConfiguracoes.Location = new System.Drawing.Point(0, 571);
             this.btnConfiguracoes.Name = "btnConfiguracoes";
-            this.btnConfiguracoes.Padding = new System.Windows.Forms.Padding(11, 0, 23, 0);
-            this.btnConfiguracoes.Size = new System.Drawing.Size(251, 80);
+            this.btnConfiguracoes.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnConfiguracoes.Size = new System.Drawing.Size(220, 60);
             this.btnConfiguracoes.TabIndex = 6;
             this.btnConfiguracoes.Text = "Configurações";
             this.btnConfiguracoes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -109,11 +160,10 @@ namespace ProjetoCommoond
             this.btnRelatorios.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRelatorios.IconSize = 32;
             this.btnRelatorios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRelatorios.Location = new System.Drawing.Point(0, 507);
-            this.btnRelatorios.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnRelatorios.Location = new System.Drawing.Point(0, 380);
             this.btnRelatorios.Name = "btnRelatorios";
-            this.btnRelatorios.Padding = new System.Windows.Forms.Padding(11, 0, 23, 0);
-            this.btnRelatorios.Size = new System.Drawing.Size(251, 80);
+            this.btnRelatorios.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnRelatorios.Size = new System.Drawing.Size(220, 60);
             this.btnRelatorios.TabIndex = 5;
             this.btnRelatorios.Text = "Relatórios";
             this.btnRelatorios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -132,11 +182,10 @@ namespace ProjetoCommoond
             this.btnFornecedores.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnFornecedores.IconSize = 32;
             this.btnFornecedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFornecedores.Location = new System.Drawing.Point(0, 427);
-            this.btnFornecedores.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnFornecedores.Location = new System.Drawing.Point(0, 320);
             this.btnFornecedores.Name = "btnFornecedores";
-            this.btnFornecedores.Padding = new System.Windows.Forms.Padding(11, 0, 23, 0);
-            this.btnFornecedores.Size = new System.Drawing.Size(251, 80);
+            this.btnFornecedores.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnFornecedores.Size = new System.Drawing.Size(220, 60);
             this.btnFornecedores.TabIndex = 4;
             this.btnFornecedores.Text = "Fornecedores";
             this.btnFornecedores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -155,11 +204,10 @@ namespace ProjetoCommoond
             this.btnProdutos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnProdutos.IconSize = 32;
             this.btnProdutos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProdutos.Location = new System.Drawing.Point(0, 347);
-            this.btnProdutos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnProdutos.Location = new System.Drawing.Point(0, 260);
             this.btnProdutos.Name = "btnProdutos";
-            this.btnProdutos.Padding = new System.Windows.Forms.Padding(11, 0, 23, 0);
-            this.btnProdutos.Size = new System.Drawing.Size(251, 80);
+            this.btnProdutos.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnProdutos.Size = new System.Drawing.Size(220, 60);
             this.btnProdutos.TabIndex = 3;
             this.btnProdutos.Text = "Produtos";
             this.btnProdutos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -178,11 +226,10 @@ namespace ProjetoCommoond
             this.btnVendas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnVendas.IconSize = 32;
             this.btnVendas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVendas.Location = new System.Drawing.Point(0, 267);
-            this.btnVendas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnVendas.Location = new System.Drawing.Point(0, 200);
             this.btnVendas.Name = "btnVendas";
-            this.btnVendas.Padding = new System.Windows.Forms.Padding(11, 0, 23, 0);
-            this.btnVendas.Size = new System.Drawing.Size(251, 80);
+            this.btnVendas.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnVendas.Size = new System.Drawing.Size(220, 60);
             this.btnVendas.TabIndex = 2;
             this.btnVendas.Text = "Vendas";
             this.btnVendas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -201,11 +248,10 @@ namespace ProjetoCommoond
             this.btnClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClientes.IconSize = 32;
             this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClientes.Location = new System.Drawing.Point(0, 187);
-            this.btnClientes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnClientes.Location = new System.Drawing.Point(0, 140);
             this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Padding = new System.Windows.Forms.Padding(11, 0, 23, 0);
-            this.btnClientes.Size = new System.Drawing.Size(251, 80);
+            this.btnClientes.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnClientes.Size = new System.Drawing.Size(220, 60);
             this.btnClientes.TabIndex = 1;
             this.btnClientes.Text = "Clientes";
             this.btnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -218,18 +264,16 @@ namespace ProjetoCommoond
             this.panelLogo.Controls.Add(this.BtnHome);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(251, 187);
+            this.panelLogo.Size = new System.Drawing.Size(220, 140);
             this.panelLogo.TabIndex = 0;
             // 
             // BtnHome
             // 
             this.BtnHome.Image = ((System.Drawing.Image)(resources.GetObject("BtnHome.Image")));
-            this.BtnHome.Location = new System.Drawing.Point(14, 32);
-            this.BtnHome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnHome.Location = new System.Drawing.Point(12, 24);
             this.BtnHome.Name = "BtnHome";
-            this.BtnHome.Size = new System.Drawing.Size(202, 132);
+            this.BtnHome.Size = new System.Drawing.Size(177, 99);
             this.BtnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.BtnHome.TabIndex = 0;
             this.BtnHome.TabStop = false;
@@ -244,10 +288,9 @@ namespace ProjetoCommoond
             this.panelTitleBar.Controls.Add(this.lblTitleChildForm);
             this.panelTitleBar.Controls.Add(this.iconCurrentChildForm);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(251, 0);
-            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelTitleBar.Location = new System.Drawing.Point(220, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(1102, 100);
+            this.panelTitleBar.Size = new System.Drawing.Size(964, 75);
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
@@ -260,10 +303,9 @@ namespace ProjetoCommoond
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimizar.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnMinimizar.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnMinimizar.Location = new System.Drawing.Point(978, 4);
-            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnMinimizar.Location = new System.Drawing.Point(856, 3);
             this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(35, 49);
+            this.btnMinimizar.Size = new System.Drawing.Size(31, 37);
             this.btnMinimizar.TabIndex = 4;
             this.btnMinimizar.Text = ".";
             this.btnMinimizar.UseVisualStyleBackColor = true;
@@ -278,10 +320,9 @@ namespace ProjetoCommoond
             this.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaximizar.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnMaximizar.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnMaximizar.Location = new System.Drawing.Point(1021, 4);
-            this.btnMaximizar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnMaximizar.Location = new System.Drawing.Point(893, 3);
             this.btnMaximizar.Name = "btnMaximizar";
-            this.btnMaximizar.Size = new System.Drawing.Size(35, 49);
+            this.btnMaximizar.Size = new System.Drawing.Size(31, 37);
             this.btnMaximizar.TabIndex = 3;
             this.btnMaximizar.Text = "o";
             this.btnMaximizar.UseVisualStyleBackColor = true;
@@ -296,10 +337,9 @@ namespace ProjetoCommoond
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFechar.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnFechar.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnFechar.Location = new System.Drawing.Point(1063, 4);
-            this.btnFechar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnFechar.Location = new System.Drawing.Point(930, 3);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(35, 49);
+            this.btnFechar.Size = new System.Drawing.Size(31, 37);
             this.btnFechar.TabIndex = 2;
             this.btnFechar.Text = "O";
             this.btnFechar.UseVisualStyleBackColor = true;
@@ -310,9 +350,9 @@ namespace ProjetoCommoond
             this.lblTitleChildForm.AutoSize = true;
             this.lblTitleChildForm.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblTitleChildForm.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblTitleChildForm.Location = new System.Drawing.Point(67, 40);
+            this.lblTitleChildForm.Location = new System.Drawing.Point(59, 30);
             this.lblTitleChildForm.Name = "lblTitleChildForm";
-            this.lblTitleChildForm.Size = new System.Drawing.Size(83, 35);
+            this.lblTitleChildForm.Size = new System.Drawing.Size(65, 28);
             this.lblTitleChildForm.TabIndex = 1;
             this.lblTitleChildForm.Text = "Home";
             // 
@@ -322,11 +362,9 @@ namespace ProjetoCommoond
             this.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.iconCurrentChildForm.IconColor = System.Drawing.Color.White;
             this.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconCurrentChildForm.IconSize = 37;
-            this.iconCurrentChildForm.Location = new System.Drawing.Point(24, 40);
-            this.iconCurrentChildForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.iconCurrentChildForm.Location = new System.Drawing.Point(21, 30);
             this.iconCurrentChildForm.Name = "iconCurrentChildForm";
-            this.iconCurrentChildForm.Size = new System.Drawing.Size(37, 43);
+            this.iconCurrentChildForm.Size = new System.Drawing.Size(32, 32);
             this.iconCurrentChildForm.TabIndex = 0;
             this.iconCurrentChildForm.TabStop = false;
             // 
@@ -334,45 +372,77 @@ namespace ProjetoCommoond
             // 
             this.panelShadow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(43)))), ((int)(((byte)(89)))));
             this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelShadow.Location = new System.Drawing.Point(251, 100);
-            this.panelShadow.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelShadow.Location = new System.Drawing.Point(220, 75);
             this.panelShadow.Name = "panelShadow";
-            this.panelShadow.Size = new System.Drawing.Size(1102, 12);
+            this.panelShadow.Size = new System.Drawing.Size(964, 9);
             this.panelShadow.TabIndex = 2;
             // 
             // panelDesktop
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(164)))), ((int)(((byte)(255)))));
+            this.panelDesktop.Controls.Add(this.iconPictureBox1);
+            this.panelDesktop.Controls.Add(this.txtMenuRelogio);
             this.panelDesktop.Controls.Add(this.pictureBox1);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(251, 112);
-            this.panelDesktop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelDesktop.Location = new System.Drawing.Point(220, 84);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(1102, 729);
+            this.panelDesktop.Size = new System.Drawing.Size(964, 547);
             this.panelDesktop.TabIndex = 3;
+            // 
+            // txtMenuRelogio
+            // 
+            this.txtMenuRelogio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(164)))), ((int)(((byte)(255)))));
+            this.txtMenuRelogio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMenuRelogio.Font = new System.Drawing.Font("Segoe UI", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtMenuRelogio.Location = new System.Drawing.Point(142, 457);
+            this.txtMenuRelogio.Name = "txtMenuRelogio";
+            this.txtMenuRelogio.Size = new System.Drawing.Size(264, 71);
+            this.txtMenuRelogio.TabIndex = 2;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(319, 113);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(59, 31);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(365, 337);
+            this.pictureBox1.Size = new System.Drawing.Size(319, 253);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // timerRelogio
+            // 
+            this.timerRelogio.Enabled = true;
+            this.timerRelogio.Interval = 1000;
+            this.timerRelogio.Tick += new System.EventHandler(this.timerRelogio_Tick);
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(164)))), ((int)(((byte)(255)))));
+            this.iconPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.iconPictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.iconPictureBox1.Enabled = false;
+            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Clock;
+            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 120;
+            this.iconPictureBox1.Location = new System.Drawing.Point(19, 448);
+            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(120, 123);
+            this.iconPictureBox1.TabIndex = 3;
+            this.iconPictureBox1.TabStop = false;
+            // 
             // FormMainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1353, 841);
+            this.ClientSize = new System.Drawing.Size(1184, 631);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelShadow);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormMainMenu";
             this.Text = "Menu";
             this.panelMenu.ResumeLayout(false);
@@ -382,7 +452,9 @@ namespace ProjetoCommoond
             this.panelTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).EndInit();
             this.panelDesktop.ResumeLayout(false);
+            this.panelDesktop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -407,6 +479,11 @@ namespace ProjetoCommoond
         private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Button btnMaximizar;
+        private System.Windows.Forms.Timer timerRelogio;
+        private System.Windows.Forms.TextBox txtMenuRelogio;
+        private FontAwesome.Sharp.IconButton btnCompras;
+        private FontAwesome.Sharp.IconButton btnMaterial;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
     }
 }
 

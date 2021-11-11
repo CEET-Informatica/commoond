@@ -140,6 +140,18 @@ namespace ProjetoCommoond
             OpenChildForm(new Configuracoes());
         }
 
+        private void btnMaterial_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color3);
+            OpenChildForm(new Material());
+        }
+
+        private void btnCompras_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color3);
+            OpenChildForm(new Compras());
+        }
+
         private void BtnHome_Click(object sender, EventArgs e)
         {
             currentChildForm.Close();
@@ -184,5 +196,12 @@ namespace ProjetoCommoond
         {
             WindowState = FormWindowState.Minimized;
         }
+
+        private void timerRelogio_Tick(object sender, EventArgs e)
+        {
+            txtMenuRelogio.Text = (DateTime.Now.TimeOfDay.ToString()).Substring(0,8);
+        }
+
+       
     }
 }

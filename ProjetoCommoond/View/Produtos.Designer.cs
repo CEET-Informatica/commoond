@@ -46,6 +46,8 @@ namespace ProjetoCommoond.View
             this.groupProdutoInfo = new System.Windows.Forms.GroupBox();
             this.btnProdutoCancelar = new FontAwesome.Sharp.IconButton();
             this.groupProdutoFornecedor = new System.Windows.Forms.GroupBox();
+            this.lblProdutosCodBar = new System.Windows.Forms.Label();
+            this.txtProdutosCodBar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataProduto)).BeginInit();
             this.groupProdutoInfo.SuspendLayout();
             this.SuspendLayout();
@@ -71,7 +73,7 @@ namespace ProjetoCommoond.View
             // 
             this.lblProdutoObs.AutoSize = true;
             this.lblProdutoObs.ForeColor = System.Drawing.Color.White;
-            this.lblProdutoObs.Location = new System.Drawing.Point(20, 170);
+            this.lblProdutoObs.Location = new System.Drawing.Point(250, 172);
             this.lblProdutoObs.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblProdutoObs.Name = "lblProdutoObs";
             this.lblProdutoObs.Size = new System.Drawing.Size(127, 28);
@@ -80,10 +82,11 @@ namespace ProjetoCommoond.View
             // 
             // txtProdutoObs
             // 
-            this.txtProdutoObs.Location = new System.Drawing.Point(17, 198);
+            this.txtProdutoObs.Location = new System.Drawing.Point(247, 198);
             this.txtProdutoObs.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtProdutoObs.MaxLength = 65000;
             this.txtProdutoObs.Name = "txtProdutoObs";
-            this.txtProdutoObs.Size = new System.Drawing.Size(570, 116);
+            this.txtProdutoObs.Size = new System.Drawing.Size(340, 116);
             this.txtProdutoObs.TabIndex = 10;
             this.txtProdutoObs.Text = "";
             // 
@@ -120,6 +123,7 @@ namespace ProjetoCommoond.View
             this.txtProdutoNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtProdutoNome.Location = new System.Drawing.Point(17, 73);
             this.txtProdutoNome.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtProdutoNome.MaxLength = 45;
             this.txtProdutoNome.Name = "txtProdutoNome";
             this.txtProdutoNome.Size = new System.Drawing.Size(212, 34);
             this.txtProdutoNome.TabIndex = 1;
@@ -214,6 +218,8 @@ namespace ProjetoCommoond.View
             // groupProdutoInfo
             // 
             this.groupProdutoInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
+            this.groupProdutoInfo.Controls.Add(this.txtProdutosCodBar);
+            this.groupProdutoInfo.Controls.Add(this.lblProdutosCodBar);
             this.groupProdutoInfo.Controls.Add(this.lblProdutoObs);
             this.groupProdutoInfo.Controls.Add(this.txtProdutoObs);
             this.groupProdutoInfo.Controls.Add(this.lblProdutoNome);
@@ -268,6 +274,24 @@ namespace ProjetoCommoond.View
             this.groupProdutoFornecedor.TabStop = false;
             this.groupProdutoFornecedor.Text = "Possível Fornecedor";
             // 
+            // lblProdutosCodBar
+            // 
+            this.lblProdutosCodBar.AutoSize = true;
+            this.lblProdutosCodBar.Location = new System.Drawing.Point(17, 172);
+            this.lblProdutosCodBar.Name = "lblProdutosCodBar";
+            this.lblProdutosCodBar.Size = new System.Drawing.Size(163, 28);
+            this.lblProdutosCodBar.TabIndex = 12;
+            this.lblProdutosCodBar.Text = "Codigo de barras";
+            // 
+            // txtProdutosCodBar
+            // 
+            this.txtProdutosCodBar.Location = new System.Drawing.Point(17, 203);
+            this.txtProdutosCodBar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtProdutosCodBar.MaxLength = 100;
+            this.txtProdutosCodBar.Name = "txtProdutosCodBar";
+            this.txtProdutosCodBar.Size = new System.Drawing.Size(212, 34);
+            this.txtProdutosCodBar.TabIndex = 13;
+            // 
             // Produtos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -309,5 +333,7 @@ namespace ProjetoCommoond.View
         private System.Windows.Forms.GroupBox groupProdutoInfo;
         private FontAwesome.Sharp.IconButton btnProdutoCancelar;
         private System.Windows.Forms.GroupBox groupProdutoFornecedor;
+        private System.Windows.Forms.TextBox txtProdutosCodBar;
+        private System.Windows.Forms.Label lblProdutosCodBar;
     }
 }

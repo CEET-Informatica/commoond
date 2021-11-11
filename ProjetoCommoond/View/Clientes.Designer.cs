@@ -52,6 +52,8 @@ namespace ProjetoCommoond.View
             this.lblClienteContatoNome = new System.Windows.Forms.Label();
             this.txtClienteContatoNome = new System.Windows.Forms.TextBox();
             this.btnClienteExcluir = new FontAwesome.Sharp.IconButton();
+            this.txtClienteEndereco = new System.Windows.Forms.TextBox();
+            this.lblClienteEndereco = new System.Windows.Forms.Label();
             this.groupInfoCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataFornec)).BeginInit();
             this.groupContatoCliente.SuspendLayout();
@@ -60,6 +62,8 @@ namespace ProjetoCommoond.View
             // groupInfoCliente
             // 
             this.groupInfoCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
+            this.groupInfoCliente.Controls.Add(this.txtClienteEndereco);
+            this.groupInfoCliente.Controls.Add(this.lblClienteEndereco);
             this.groupInfoCliente.Controls.Add(this.lblClienteObs);
             this.groupInfoCliente.Controls.Add(this.txtClienteObs);
             this.groupInfoCliente.Controls.Add(this.lblClienteCnpj);
@@ -86,19 +90,20 @@ namespace ProjetoCommoond.View
             // 
             this.lblClienteObs.AutoSize = true;
             this.lblClienteObs.ForeColor = System.Drawing.Color.White;
-            this.lblClienteObs.Location = new System.Drawing.Point(19, 170);
+            this.lblClienteObs.Location = new System.Drawing.Point(249, 172);
             this.lblClienteObs.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblClienteObs.Name = "lblClienteObs";
-            this.lblClienteObs.Size = new System.Drawing.Size(228, 28);
+            this.lblClienteObs.Size = new System.Drawing.Size(123, 28);
             this.lblClienteObs.TabIndex = 11;
-            this.lblClienteObs.Text = "Observações e endereço:";
+            this.lblClienteObs.Text = "Observações";
             // 
             // txtClienteObs
             // 
-            this.txtClienteObs.Location = new System.Drawing.Point(17, 198);
+            this.txtClienteObs.Location = new System.Drawing.Point(247, 198);
             this.txtClienteObs.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtClienteObs.MaxLength = 65000;
             this.txtClienteObs.Name = "txtClienteObs";
-            this.txtClienteObs.Size = new System.Drawing.Size(570, 116);
+            this.txtClienteObs.Size = new System.Drawing.Size(340, 116);
             this.txtClienteObs.TabIndex = 10;
             this.txtClienteObs.Text = "";
             // 
@@ -117,6 +122,7 @@ namespace ProjetoCommoond.View
             // 
             this.txtClienteRazao.Location = new System.Drawing.Point(247, 72);
             this.txtClienteRazao.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtClienteRazao.MaxLength = 80;
             this.txtClienteRazao.Name = "txtClienteRazao";
             this.txtClienteRazao.Size = new System.Drawing.Size(340, 34);
             this.txtClienteRazao.TabIndex = 3;
@@ -125,6 +131,7 @@ namespace ProjetoCommoond.View
             // 
             this.txtClienteNomeFantasia.Location = new System.Drawing.Point(247, 135);
             this.txtClienteNomeFantasia.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtClienteNomeFantasia.MaxLength = 80;
             this.txtClienteNomeFantasia.Name = "txtClienteNomeFantasia";
             this.txtClienteNomeFantasia.Size = new System.Drawing.Size(340, 34);
             this.txtClienteNomeFantasia.TabIndex = 9;
@@ -135,6 +142,7 @@ namespace ProjetoCommoond.View
             this.txtClienteCnpj.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtClienteCnpj.Location = new System.Drawing.Point(17, 73);
             this.txtClienteCnpj.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtClienteCnpj.MaxLength = 22;
             this.txtClienteCnpj.Name = "txtClienteCnpj";
             this.txtClienteCnpj.Size = new System.Drawing.Size(212, 34);
             this.txtClienteCnpj.TabIndex = 1;
@@ -165,6 +173,7 @@ namespace ProjetoCommoond.View
             // 
             this.txtClienteInscricao.Location = new System.Drawing.Point(17, 135);
             this.txtClienteInscricao.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtClienteInscricao.MaxLength = 20;
             this.txtClienteInscricao.Name = "txtClienteInscricao";
             this.txtClienteInscricao.Size = new System.Drawing.Size(212, 34);
             this.txtClienteInscricao.TabIndex = 7;
@@ -279,6 +288,7 @@ namespace ProjetoCommoond.View
             // 
             this.txtClienteContatoTelefone.Location = new System.Drawing.Point(15, 198);
             this.txtClienteContatoTelefone.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtClienteContatoTelefone.MaxLength = 20;
             this.txtClienteContatoTelefone.Name = "txtClienteContatoTelefone";
             this.txtClienteContatoTelefone.Size = new System.Drawing.Size(296, 34);
             this.txtClienteContatoTelefone.TabIndex = 17;
@@ -298,6 +308,7 @@ namespace ProjetoCommoond.View
             // 
             this.txtClienteContatoEmail.Location = new System.Drawing.Point(15, 135);
             this.txtClienteContatoEmail.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtClienteContatoEmail.MaxLength = 80;
             this.txtClienteContatoEmail.Name = "txtClienteContatoEmail";
             this.txtClienteContatoEmail.Size = new System.Drawing.Size(296, 34);
             this.txtClienteContatoEmail.TabIndex = 15;
@@ -317,6 +328,7 @@ namespace ProjetoCommoond.View
             // 
             this.txtClienteContatoNome.Location = new System.Drawing.Point(15, 72);
             this.txtClienteContatoNome.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtClienteContatoNome.MaxLength = 80;
             this.txtClienteContatoNome.Name = "txtClienteContatoNome";
             this.txtClienteContatoNome.Size = new System.Drawing.Size(296, 34);
             this.txtClienteContatoNome.TabIndex = 13;
@@ -337,6 +349,26 @@ namespace ProjetoCommoond.View
             this.btnClienteExcluir.TabIndex = 27;
             this.btnClienteExcluir.Text = "Excluir";
             this.btnClienteExcluir.UseVisualStyleBackColor = false;
+            // 
+            // txtClienteEndereco
+            // 
+            this.txtClienteEndereco.Location = new System.Drawing.Point(19, 280);
+            this.txtClienteEndereco.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtClienteEndereco.MaxLength = 100;
+            this.txtClienteEndereco.Name = "txtClienteEndereco";
+            this.txtClienteEndereco.Size = new System.Drawing.Size(211, 34);
+            this.txtClienteEndereco.TabIndex = 17;
+            // 
+            // lblClienteEndereco
+            // 
+            this.lblClienteEndereco.AutoSize = true;
+            this.lblClienteEndereco.ForeColor = System.Drawing.Color.White;
+            this.lblClienteEndereco.Location = new System.Drawing.Point(19, 249);
+            this.lblClienteEndereco.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblClienteEndereco.Name = "lblClienteEndereco";
+            this.lblClienteEndereco.Size = new System.Drawing.Size(93, 28);
+            this.lblClienteEndereco.TabIndex = 16;
+            this.lblClienteEndereco.Text = "Endereço";
             // 
             // Clientes
             // 
@@ -389,5 +421,7 @@ namespace ProjetoCommoond.View
         private System.Windows.Forms.Label lblClienteContatoNome;
         private System.Windows.Forms.TextBox txtClienteContatoNome;
         private FontAwesome.Sharp.IconButton btnClienteExcluir;
+        private System.Windows.Forms.TextBox txtClienteEndereco;
+        private System.Windows.Forms.Label lblClienteEndereco;
     }
 }
